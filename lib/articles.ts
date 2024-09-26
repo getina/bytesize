@@ -24,7 +24,7 @@ const getSortedArticles = (): ArticleItem[] => {
       id,
       title: matterResult.data.title,
       date: matterResult.data.date,
-      category: matterResult.data.category,
+      category: matterResult.data.category
     }
   })
 
