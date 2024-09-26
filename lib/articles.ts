@@ -37,7 +37,7 @@ const getSortedArticles = (): ArticleItem[] => {
     } else if (dateTwo.isAfter(dateOne)) {
       return 1
     } else {
-      0
+      return 0
     }
   })
 }
