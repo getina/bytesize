@@ -14,8 +14,8 @@ const AboutUs = () => {
           className="cursor-pointer" 
         />  
       </div>
-      <p className="w-full text-customWhite text-center whitespace-nowrap max-w-full overflow-hidden z-20" style={{ fontSize: '3vw' }}>
-        we're bringing tech news as it relates to you.
+      <p className="w-full text-customWhite text-center whitespace-nowrap max-w-full overflow-hidden z-20 animate-fadeIn" style={{ fontSize: '3vw' }}>
+        {"we're bringing tech news as it relates to you."}
       </p>      
     </div>
   );
