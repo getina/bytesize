@@ -8,33 +8,24 @@ import Logo from '../public/logo.svg'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 
 const NavBar = () => {
-    const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
-    const handleNav = () : void => {
-        setMenuOpen(!menuOpen)
-    }
+  const handleNav = () : void => {
+      setMenuOpen(!menuOpen)
+  }
 
   const links = [
-    {
-      id: 1,
-      link: "Tech",
-    },
-    {
-      id: 2,
-      link: "Reviews",
-    },
-    {
-      id: 3,
-      link: "Culture",
-    },
-    {
-      id: 4,
-      link: "AI",
-    },
-    {
-      id: 5,
-      link: "About Us",
-    },
+    { id: 1, link: "Tech" },
+    { id: 2, link: "Reviews" },
+    { id: 3, link: "Culture" },
+    { id: 4, link: "AI" },
+    { id: 5, link: "Breaking"},
+  ];
+
+  const additionalLinks = [
+    { id: 1, link: "About" },
+    { id: 2, link: "Contact us" },
+    { id: 3, link: "Subscribe" }
   ];
 
   return (
@@ -130,12 +121,23 @@ const NavBar = () => {
                 {links.map(({ id, link }) => (
                 <li
                     key={id}
-                    className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 hover:text-white duration-200 link-underline"
-                >
+                    className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-300 text-2xl hover:scale-105 hover:text-white duration-200 link-underline" // Changed font size class
+                    >
                     <Link href={link}>{link}</Link>
                 </li>
                 ))}
             </ul>
+
+            <hr className="my-4 border-gray-500" />
+
+            {/* Additional Links in Two Columns */}
+            <div className="grid grid-cols-2 gap-4">
+              {additionalLinks.map(({ id, link }) => (
+                <div key={id} className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-300 text-m hover:scale-105 hover:text-white duration-200 link-underline">
+                  <Link href={link.toLowerCase()}>{link}</Link>
+                </div>
+              ))}
+            </div>
 
         </div>
 
