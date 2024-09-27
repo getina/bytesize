@@ -25,7 +25,6 @@ const NavBar = () => {
   const additionalLinks = [
     { id: 1, link: "About" },
     { id: 2, link: "Contact" },
-    { id: 3, link: "Subscribe" }
   ];
 
   return (
