@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from '../public/logo.svg'
+import Title from '/public/title.svg'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 
 const NavBar = () => {
@@ -24,15 +24,15 @@ const NavBar = () => {
 
   const additionalLinks = [
     { id: 1, link: "About" },
-    { id: 2, link: "Contact us" },
+    { id: 2, link: "Contact" },
     { id: 3, link: "Subscribe" }
   ];
 
   return (
-    <nav className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed nav">
+    <nav className="flex justify-between items-center w-full h-20 px-4 text-white bg-customGray fixed nav z-50">
         <div className="flex-grow flex justify-center items-center">
             <h1 className="text-5xl font-signature">
-                <Image src={Logo} alt="Logo" width="130" height="75" className="cursor-pointer"/>
+                <Image src={Title} alt="Logo" width="130" height="75" className="cursor-pointer"/>
                 {/* <a
                 className="link-underline link-underline-black"
                 href=""
